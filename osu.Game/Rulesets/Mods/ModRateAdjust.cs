@@ -12,14 +12,6 @@ namespace osu.Game.Rulesets.Mods
     {
         public abstract BindableNumber<double> SpeedChange { get; }
 
-        protected ModRateAdjust()
-        {
-            SpeedChange.BindValueChanged(val =>
-            {
-                ScoreMultiplier += (val.NewValue - SpeedChange.Default);
-            }, true);
-        }
-
         public virtual void ApplyToTrack(ITrack track)
         {
             track.AddAdjustment(AdjustableProperty.Tempo, SpeedChange);
