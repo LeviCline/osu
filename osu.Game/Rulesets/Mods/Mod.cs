@@ -100,7 +100,7 @@ namespace osu.Game.Rulesets.Mods
         /// The score multiplier of this mod.
         /// </summary>
         [JsonIgnore]
-        public virtual double ScoreMultiplier { get; set; }
+        public abstract double ScoreMultiplier { get; set; }
 
         /// <summary>
         /// Returns true if this mod is implemented (and playable).
