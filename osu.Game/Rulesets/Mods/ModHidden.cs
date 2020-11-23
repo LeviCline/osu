@@ -10,6 +10,9 @@ using osu.Game.Scoring;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod makes targets fade out before needing to be hit
+    /// </summary>
     public abstract class ModHidden : ModWithVisibilityAdjustment, IApplicableToScoreProcessor
     {
         public override string Name => "Hidden";

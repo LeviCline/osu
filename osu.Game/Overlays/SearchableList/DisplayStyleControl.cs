@@ -57,12 +57,12 @@ namespace osu.Game.Overlays.SearchableList
                     },
                 };
 
-                bindable.ValueChanged += Bindable_ValueChanged;
-                Bindable_ValueChanged(new ValueChangedEvent<PanelDisplayStyle>(bindable.Value, bindable.Value));
+                bindable.ValueChanged += bindable_ValueChanged;
+                bindable_ValueChanged(new ValueChangedEvent<PanelDisplayStyle>(bindable.Value, bindable.Value));
                 Action = () => bindable.Value = this.style;
             }
 
-            private void Bindable_ValueChanged(ValueChangedEvent<PanelDisplayStyle> e)
+            private void bindable_ValueChanged(ValueChangedEvent<PanelDisplayStyle> e)
             {
                 icon.FadeTo(e.NewValue == style ? 1.0f : 0.5f, 100);
             }
@@ -71,7 +71,7 @@ namespace osu.Game.Overlays.SearchableList
             {
                 base.Dispose(isDisposing);
 
-                bindable.ValueChanged -= Bindable_ValueChanged;
+                bindable.ValueChanged -= bindable_ValueChanged;
             }
         }
     }

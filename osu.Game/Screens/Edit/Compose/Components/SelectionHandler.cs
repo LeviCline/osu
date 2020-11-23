@@ -345,9 +345,7 @@ namespace osu.Game.Screens.Edit.Compose.Components
 
             foreach (var h in EditorBeatmap.SelectedHitObjects)
             {
-                var comboInfo = h as IHasComboInformation;
-
-                if (comboInfo == null || comboInfo.NewCombo == state) continue;
+                if (!(h is IHasComboInformation comboInfo) || comboInfo.NewCombo == state) continue;
 
                 comboInfo.NewCombo = state;
                 EditorBeatmap.Update(h);

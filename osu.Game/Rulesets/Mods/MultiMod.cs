@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod for selecting multiple mods at one time.
+    /// </summary>
     public sealed class MultiMod : Mod
     {
         public override string Name => string.Empty;

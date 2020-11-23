@@ -29,13 +29,12 @@ namespace osu.Game.Screens.Edit.Compose.Components.Timeline
 
         private readonly Container zoomedContent;
         protected override Container<Drawable> Content => zoomedContent;
-        private float currentZoom = 1;
 
         /// <summary>
         /// The current zoom level of <see cref="ZoomableScrollContainer" />.
         /// It may differ from <see cref="Zoom" /> during transitions.
         /// </summary>
-        public float CurrentZoom => currentZoom;
+        public float CurrentZoom { get; private set; } = 1;
 
         [Resolved(canBeNull: true)]
         private IFrameBasedClock editorClock { get; set; }
@@ -99,7 +98,7 @@ namespace osu.Game.Screens.Edit.Compose.Components.Timeline
                 if (IsLoaded)
                     setZoomTarget(value, ToSpaceOfOtherDrawable(new Vector2(DrawWidth / 2, 0), zoomedContent).X);
                 else
-                    currentZoom = zoomTarget = value;
+                    CurrentZoom = zoomTarget = value;
             }
         }
 
@@ -128,7 +127,7 @@ namespace osu.Game.Screens.Edit.Compose.Components.Timeline
             return base.OnScroll(e);
         }
 
-        private void updateZoomedContentWidth() => zoomedContent.Width = DrawWidth * currentZoom;
+        private void updateZoomedContentWidth() => zoomedContent.Width = DrawWidth * CurrentZoom;
 
         private float zoomTarget = 1;
 
@@ -159,7 +158,7 @@ namespace osu.Game.Screens.Edit.Compose.Components.Timeline
             private readonly float scrollOffset;
 
             /// <summary>
-            /// Transforms <see cref="ZoomableScrollContainer.currentZoom"/> to a new value.
+            /// Transforms <see cref="ZoomableScrollContainer.CurrentZoom"/> to a new value.
             /// </summary>
             /// <param name="focusPoint">The focus point in absolute coordinates local to the content.</param>
             /// <param name="contentSize">The size of the content.</param>
@@ -171,7 +170,7 @@ namespace osu.Game.Screens.Edit.Compose.Components.Timeline
                 this.scrollOffset = scrollOffset;
             }
 
-            public override string TargetMember => nameof(currentZoom);
+            public override string TargetMember => nameof(CurrentZoom);
 
             private float valueAt(double time)
             {
@@ -189,7 +188,7 @@ namespace osu.Game.Screens.Edit.Compose.Components.Timeline
                 float expectedWidth = d.DrawWidth * newZoom;
                 float targetOffset = expectedWidth * (focusPoint / contentSize) - focusOffset;
 
-                d.currentZoom = newZoom;
+                d.CurrentZoom = newZoom;
 
                 d.updateZoomedContentWidth();
                 // Temporarily here to make sure ScrollTo gets the correct DrawSize for scrollable area.
@@ -198,7 +197,7 @@ namespace osu.Game.Screens.Edit.Compose.Components.Timeline
                 d.ScrollTo(targetOffset, false);
             }
 
-            protected override void ReadIntoStartValue(ZoomableScrollContainer d) => StartValue = d.currentZoom;
+            protected override void ReadIntoStartValue(ZoomableScrollContainer d) => StartValue = d.CurrentZoom;
         }
     }
 }

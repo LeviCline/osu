@@ -7,6 +7,9 @@ using osu.Game.Graphics;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Extendts ModBlockFail, making the player unable to fail
+    /// </summary>
     public abstract class ModRelax : ModBlockFail
     {
         public override string Name => "Relax";

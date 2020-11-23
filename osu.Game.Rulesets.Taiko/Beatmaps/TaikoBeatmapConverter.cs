@@ -143,7 +143,7 @@ namespace osu.Game.Rulesets.Taiko.Beatmaps
 
                 default:
                 {
-                    bool isRimDefinition(HitSampleInfo s) => s.Name == HitSampleInfo.HIT_CLAP || s.Name == HitSampleInfo.HIT_WHISTLE;
+                    static bool isRimDefinition(HitSampleInfo s) => s.Name == HitSampleInfo.HIT_CLAP || s.Name == HitSampleInfo.HIT_WHISTLE;
 
                     bool isRim = samples.Any(isRimDefinition);
 

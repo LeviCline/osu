@@ -159,12 +159,12 @@ namespace osu.Game.Beatmaps
 
                         if (found != null)
                         {
-                            var status = (BeatmapSetOnlineStatus)found.approved;
+                            var status = (BeatmapSetOnlineStatus)found.Approved;
 
                             beatmap.Status = status;
                             beatmap.BeatmapSet.Status = status;
-                            beatmap.BeatmapSet.OnlineBeatmapSetID = found.beatmapset_id;
-                            beatmap.OnlineBeatmapID = found.beatmap_id;
+                            beatmap.BeatmapSet.OnlineBeatmapSetID = found.Beatmapset_id;
+                            beatmap.OnlineBeatmapID = found.Beatmap_id;
 
                             LogForModel(set, $"Cached local retrieval for {beatmap}.");
                             return true;
@@ -189,11 +189,11 @@ namespace osu.Game.Beatmaps
             [SuppressMessage("ReSharper", "InconsistentNaming")]
             private class CachedOnlineBeatmapLookup
             {
-                public int approved { get; set; }
+                public int Approved { get; set; }
 
-                public int? beatmapset_id { get; set; }
+                public int? Beatmapset_id { get; set; }
 
-                public int? beatmap_id { get; set; }
+                public int? Beatmap_id { get; set; }
             }
         }
     }

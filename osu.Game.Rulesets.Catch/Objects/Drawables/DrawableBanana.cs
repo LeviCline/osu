@@ -37,7 +37,7 @@ namespace osu.Game.Rulesets.Catch.Objects.Drawables
                           .Then()
                           .RotateTo(getRandomAngle(), HitObject.TimePreempt);
 
-            float getRandomAngle() => 180 * (RNG.NextSingle() * 2 - 1);
+            static float getRandomAngle() => 180 * (RNG.NextSingle() * 2 - 1);
         }
 
         public override void PlaySamples()

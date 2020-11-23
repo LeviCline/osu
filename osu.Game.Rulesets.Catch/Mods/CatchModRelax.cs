@@ -14,6 +14,9 @@ using osuTK;
 
 namespace osu.Game.Rulesets.Catch.Mods
 {
+    /// <summary>
+    /// Mod lets the player use the mouse to move faster than usually possible.
+    /// </summary>
     public class CatchModRelax : ModRelax, IApplicableToDrawableRuleset<CatchHitObject>, IApplicableToPlayer
     {
         public override string Description => @"Use the mouse to control the catcher.";

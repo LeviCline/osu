@@ -20,6 +20,10 @@ using osu.Game.Skinning;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Extends ModDoubleTime and adds a background beat
+    /// </summary>
+    /// <typeparam name="TObject"></typeparam>
     public abstract class ModNightcore<TObject> : ModDoubleTime, IApplicableToDrawableRuleset<TObject>
         where TObject : HitObject
     {

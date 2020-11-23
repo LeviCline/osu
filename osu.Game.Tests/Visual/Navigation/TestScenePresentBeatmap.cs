@@ -139,7 +139,7 @@ namespace osu.Game.Tests.Visual.Navigation
 
         private void presentSecondDifficultyAndConfirm(Func<BeatmapSetInfo> getImport, int importedID)
         {
-            Predicate<BeatmapInfo> pred = b => b.OnlineBeatmapID == importedID * 2048;
+            bool pred(BeatmapInfo b) => b.OnlineBeatmapID == importedID * 2048;
             AddStep("present difficulty", () => Game.PresentBeatmap(getImport(), pred));
 
             AddUntilStep("wait for song select", () => Game.ScreenStack.CurrentScreen is Screens.Select.SongSelect);

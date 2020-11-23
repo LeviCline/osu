@@ -78,7 +78,7 @@ namespace osu.Game.Screens.Edit.Compose.Components.Timeline
             {
                 if (e.Button == MouseButton.Left)
                 {
-                    Action clickAction = () => base.OnClick(new ClickEvent(e.CurrentState, e.Button));
+                    void clickAction() => base.OnClick(new ClickEvent(e.CurrentState, e.Button));
 
                     // run once for initial down
                     clickAction();

@@ -8,6 +8,9 @@ using osu.Framework.Graphics.Audio;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod lets user change the speed of the track, extended into halftime and doubletime
+    /// </summary>
     public abstract class ModRateAdjust : Mod, IApplicableToAudio
     {
         public abstract BindableNumber<double> SpeedChange { get; }

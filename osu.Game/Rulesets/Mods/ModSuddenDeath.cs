@@ -9,6 +9,9 @@ using osu.Game.Rulesets.Scoring;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod makes one miss of a target fail the track.
+    /// </summary>
     public abstract class ModSuddenDeath : Mod, IApplicableToHealthProcessor, IApplicableFailOverride
     {
         public override string Name => "Sudden Death";

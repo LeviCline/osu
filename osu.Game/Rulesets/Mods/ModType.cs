@@ -3,6 +3,9 @@
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// All the mod types for easy categorization
+    /// </summary>
     public enum ModType
     {
         DifficultyReduction,

@@ -8,6 +8,9 @@ using osu.Game.Rulesets.Scoring;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Extends ModSuddenDeath and adds the condition that all hits must be perfect or the player fails.
+    /// </summary>
     public abstract class ModPerfect : ModSuddenDeath
     {
         public override string Name => "Perfect";

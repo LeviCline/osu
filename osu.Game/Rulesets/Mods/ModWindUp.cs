@@ -9,6 +9,9 @@ using osu.Game.Configuration;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Extends ModTimeRamp to speed the track from the given start speed to the given end speed.
+    /// </summary>
     public class ModWindUp : ModTimeRamp
     {
         public override string Name => "Wind Up";

@@ -42,7 +42,7 @@ namespace osu.Game.Graphics.Containers
                 previousLinkEnd = link.Index + link.Length;
             }
 
-            AddText(text.Substring(previousLinkEnd));
+            AddText(text[previousLinkEnd..]);
         }
 
         public void AddLink(string text, string url, Action<SpriteText> creationParameters = null) =>

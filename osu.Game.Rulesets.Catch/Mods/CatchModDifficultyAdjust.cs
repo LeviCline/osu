@@ -9,6 +9,9 @@ using osu.Game.Rulesets.Mods;
 
 namespace osu.Game.Rulesets.Catch.Mods
 {
+    /// <summary>
+    /// Extends ModDifficyltyAdjust, adds Circle Size and Approach Rate to be adjusted.
+    /// </summary>
     public class CatchModDifficultyAdjust : ModDifficultyAdjust
     {
         [SettingSource("Circle Size", "Override a beatmap's set CS.", FIRST_SETTING_ORDER - 1)]

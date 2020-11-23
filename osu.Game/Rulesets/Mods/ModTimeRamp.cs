@@ -14,6 +14,9 @@ using osu.Game.Rulesets.UI;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod lets the player choose a starting speed and end speed for the track
+    /// </summary>
     public abstract class ModTimeRamp : Mod, IUpdatableByPlayfield, IApplicableToBeatmap, IApplicableToAudio
     {
         /// <summary>

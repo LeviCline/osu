@@ -6,6 +6,9 @@ using osu.Game.Graphics;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod Randomized the placement of the targets
+    /// </summary>
     public abstract class ModRandom : Mod
     {
         public override string Name => "Random";

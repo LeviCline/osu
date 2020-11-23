@@ -7,6 +7,9 @@ using osu.Game.Graphics;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Extends ModBlockFail to make the player unable to fail the track.
+    /// </summary>
     public abstract class ModNoFail : ModBlockFail
     {
         public override string Name => "No Fail";
