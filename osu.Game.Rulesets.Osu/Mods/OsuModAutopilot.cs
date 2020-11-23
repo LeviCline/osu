@@ -14,19 +14,9 @@ using osu.Game.Rulesets.UI;
 
 namespace osu.Game.Rulesets.Osu.Mods
 {
-    public class OsuModAutopilot : Mod, IApplicableFailOverride, IUpdatableByPlayfield, IApplicableToDrawableRuleset<OsuHitObject>
+    public class OsuModAutopilot : ModAutopilot
     {
-        public override string Name => "Autopilot";
-        public override string Acronym => "AP";
-        public override IconUsage? Icon => OsuIcon.ModAutopilot;
-        public override ModType Type => ModType.Automation;
-        public override string Description => @"Automatic cursor movement - just follow the rhythm.";
-        public override double ScoreMultiplier => 1;
-        public override Type[] IncompatibleMods => new[] { typeof(OsuModSpunOut), typeof(ModRelax), typeof(ModSuddenDeath), typeof(ModNoFail), typeof(ModAutoplay) };
-
-        public bool PerformFail() => false;
-
-        public bool RestartOnFail => false;
+        public override Type[] IncompatibleMods => base.IncompatibleMods.Append(typeof(OsuModSpunOut)).ToArray();
 
         private OsuInputManager inputManager;
 
@@ -36,7 +26,7 @@ namespace osu.Game.Rulesets.Osu.Mods
 
         private int currentFrame;
 
-        public void Update(Playfield playfield)
+        public new void Update(Playfield playfield)
         {
             if (currentFrame == replayFrames.Count - 1) return;
 
