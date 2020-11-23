@@ -24,6 +24,9 @@ using osuTK.Graphics;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod creates an area around the mouse where targets can be seen, blacks out the rest of the screen
+    /// </summary>
     public abstract class ModFlashlight : Mod
     {
         public override string Name => "Flashlight";

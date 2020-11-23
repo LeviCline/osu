@@ -7,6 +7,9 @@ using osu.Game.Rulesets.Mania.UI;
 
 namespace osu.Game.Rulesets.Mania.Mods
 {
+    /// <summary>
+    /// Mod makes the targets hidden until about halfway to the keys
+    /// </summary>
     public class ManiaModFadeIn : ManiaModHidden
     {
         public override string Name => "Fade In";

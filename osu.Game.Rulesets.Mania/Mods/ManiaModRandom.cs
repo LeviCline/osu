@@ -11,6 +11,9 @@ using osu.Game.Rulesets.Mods;
 
 namespace osu.Game.Rulesets.Mania.Mods
 {
+    /// <summary>
+    /// Mod randomizes what key will get what target
+    /// </summary>
     public class ManiaModRandom : ModRandom, IApplicableToBeatmap
     {
         public override string Description => @"Shuffle around the keys!";

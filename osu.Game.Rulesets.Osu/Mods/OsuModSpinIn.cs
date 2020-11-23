@@ -12,6 +12,9 @@ using osuTK;
 
 namespace osu.Game.Rulesets.Osu.Mods
 {
+    /// <summary>
+    /// Extends ModWithVisibilityAdjustment to make the targets spin into existance instead of having the circles approach.
+    /// </summary>
     public class OsuModSpinIn : ModWithVisibilityAdjustment
     {
         public override string Name => "Spin In";

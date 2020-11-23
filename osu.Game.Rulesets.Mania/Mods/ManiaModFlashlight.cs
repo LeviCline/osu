@@ -11,6 +11,9 @@ using osuTK;
 
 namespace osu.Game.Rulesets.Mania.Mods
 {
+    /// <summary>
+    /// Mod makes the only visible part of the targets in the middle of the screen
+    /// </summary>
     public class ManiaModFlashlight : ModFlashlight<ManiaHitObject>
     {
         public override double ScoreMultiplier => 1;

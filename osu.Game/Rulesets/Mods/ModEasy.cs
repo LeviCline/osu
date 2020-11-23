@@ -12,6 +12,9 @@ using osu.Game.Rulesets.Scoring;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod gives extra lives and halves the circle size, approach rate, accuracy, and drain rate.
+    /// </summary>
     public abstract class ModEasy : Mod, IApplicableToDifficulty, IApplicableFailOverride, IApplicableToHealthProcessor
     {
         public override string Name => "Easy";

@@ -8,6 +8,9 @@ using osu.Framework.Graphics.Sprites;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Extends Halftime and adds frequency change to match slowed down speed.
+    /// </summary>
     public abstract class ModDaycore : ModHalfTime
     {
         public override string Name => "Daycore";

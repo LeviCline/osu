@@ -8,6 +8,9 @@ using osu.Game.Graphics;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod increases the circle size, approach rate, accuracy, and drain rate by a selected ratio.
+    /// </summary>
     public abstract class ModHardRock : Mod, IApplicableToDifficulty
     {
         public override string Name => "Hard Rock";

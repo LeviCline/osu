@@ -11,6 +11,11 @@ using System.Linq;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod allows player to change Difficulty Settings.
+    /// Acuracy: How close does the player need to click to get a hit on the target.
+    /// HP Drain: How much Health is drained by missing a target.
+    /// </summary>
     public abstract class ModDifficultyAdjust : Mod, IApplicableToDifficulty
     {
         public override string Name => @"Difficulty Adjust";

@@ -18,6 +18,10 @@ using osu.Game.Skinning;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Mod adds the background beats from Nightcore mod
+    /// </summary>
+    /// <typeparam name="TObject"></typeparam>
     public abstract class ModFunBeats<TObject> : Mod, IApplicableToDrawableRuleset<TObject>
         where TObject : HitObject
     {

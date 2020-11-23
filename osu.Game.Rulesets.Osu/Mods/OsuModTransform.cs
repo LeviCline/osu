@@ -12,6 +12,9 @@ using osuTK;
 
 namespace osu.Game.Rulesets.Osu.Mods
 {
+    /// <summary>
+    /// Extends ModWithVisibilityAdjustment to make the targets fly in from off screen and change original placement
+    /// </summary>
     internal class OsuModTransform : ModWithVisibilityAdjustment
     {
         public override string Name => "Transform";

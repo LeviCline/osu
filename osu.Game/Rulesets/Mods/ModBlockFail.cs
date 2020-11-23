@@ -7,6 +7,9 @@ using osu.Game.Screens.Play;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Base mod does not allow for fail.
+    /// </summary>
     public abstract class ModBlockFail : Mod, IApplicableFailOverride, IApplicableToHUD, IReadFromConfig
     {
         private Bindable<bool> showHealthBar;

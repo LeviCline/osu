@@ -9,6 +9,9 @@ using osu.Game.Rulesets.Mods;
 
 namespace osu.Game.Rulesets.Mania.Mods
 {
+    /// <summary>
+    /// Mod lets the player change the number of keys used in the game from 1-9.
+    /// </summary>
     public abstract class ManiaKeyMod : Mod, IApplicableToBeatmapConverter
     {
         public override string Acronym => Name;

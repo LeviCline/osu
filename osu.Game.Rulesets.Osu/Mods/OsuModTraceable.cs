@@ -11,6 +11,9 @@ using osu.Game.Rulesets.Osu.Objects.Drawables.Pieces;
 
 namespace osu.Game.Rulesets.Osu.Mods
 {
+    /// <summary>
+    /// Extends ModWithVisibilityAdjustment to make the targets just outlines, no numbers to show what beat is next
+    /// </summary>
     internal class OsuModTraceable : ModWithVisibilityAdjustment
     {
         public override string Name => "Traceable";

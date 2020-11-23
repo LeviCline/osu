@@ -12,6 +12,9 @@ using osu.Game.Rulesets.UI;
 
 namespace osu.Game.Rulesets.Mania.Mods
 {
+    /// <summary>
+    /// Mod makes the targets visible on the top part of the screen, fading out before the keys.
+    /// </summary>
     public class ManiaModHidden : ModHidden, IApplicableToDrawableRuleset<ManiaHitObject>
     {
         public override string Description => @"Keys fade out before you hit them!";

@@ -13,6 +13,9 @@ using osu.Game.Rulesets.Osu.Objects.Drawables;
 
 namespace osu.Game.Rulesets.Osu.Mods
 {
+    /// <summary>
+    /// Mod automatically completes spinners.
+    /// </summary>
     public class OsuModSpunOut : Mod, IApplicableToDrawableHitObjects
     {
         public override string Name => "Spun Out";

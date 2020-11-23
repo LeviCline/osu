@@ -10,10 +10,14 @@ using osu.Game.Rulesets.Mania.Beatmaps;
 
 namespace osu.Game.Rulesets.Mania.Mods
 {
+    /// <summary>
+    /// Mod mirrors the keys left to right, so if the first target was for the far left key, it is now for the far right key.
+    /// </summary>
     public class ManiaModMirror : Mod, IApplicableToBeatmap
     {
         public override string Name => "Mirror";
         public override string Acronym => "MR";
+        public override string Description => "Flip the script.";
         public override ModType Type => ModType.Conversion;
         public override double ScoreMultiplier => 1;
         public override bool Ranked => true;

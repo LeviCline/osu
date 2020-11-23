@@ -10,6 +10,9 @@ using osu.Game.Graphics;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Extends ModRateAdjust to change the speed of the song to 1.5x
+    /// </summary>
     public abstract class ModDoubleTime : ModRateAdjust
     {
         public override string Name => "Double Time";

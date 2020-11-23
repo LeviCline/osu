@@ -12,6 +12,10 @@ using osu.Game.Scoring;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Moves the mouse and hits the targets for the player.
+    /// </summary>
+    /// <typeparam name="T">The hit objects that will automatically be hit</typeparam>
     public abstract class ModAutoplay<T> : ModAutoplay, IApplicableToDrawableRuleset<T>
         where T : HitObject
     {

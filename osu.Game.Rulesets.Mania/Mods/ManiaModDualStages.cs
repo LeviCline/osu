@@ -7,6 +7,9 @@ using osu.Game.Rulesets.Mods;
 
 namespace osu.Game.Rulesets.Mania.Mods
 {
+    /// <summary>
+    /// Mod doubles the keys to 8 with a second set with their own targets
+    /// </summary>
     public class ManiaModDualStages : Mod, IPlayfieldTypeMod, IApplicableToBeatmapConverter
     {
         public override string Name => "Dual Stages";

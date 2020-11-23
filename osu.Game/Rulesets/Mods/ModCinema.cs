@@ -9,6 +9,9 @@ using osu.Game.Screens.Play;
 
 namespace osu.Game.Rulesets.Mods
 {
+    /// <summary>
+    /// Extends Autoplay removing targets to show just the background while song plays.
+    /// </summary>
     public abstract class ModCinema<T> : ModCinema, IApplicableToDrawableRuleset<T>
         where T : HitObject
     {

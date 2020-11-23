@@ -13,6 +13,9 @@ using osu.Game.Rulesets.Mods;
 
 namespace osu.Game.Rulesets.Mania.Mods
 {
+    /// <summary>
+    /// Mod makes the player hold down the keys, then release on the beat before being held down again
+    /// </summary>
     public class ManiaModInvert : Mod, IApplicableAfterBeatmapConversion
     {
         public override string Name => "Invert";

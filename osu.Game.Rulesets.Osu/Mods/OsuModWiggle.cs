@@ -12,6 +12,9 @@ using osuTK;
 
 namespace osu.Game.Rulesets.Osu.Mods
 {
+    /// <summary>
+    /// Extends ModWithVisibilityAdjustment to make the targets 'wiggle' 
+    /// </summary>
     internal class OsuModWiggle : ModWithVisibilityAdjustment
     {
         public override string Name => "Wiggle";

@@ -10,6 +10,9 @@ using osu.Game.Rulesets.UI;
 
 namespace osu.Game.Rulesets.Osu.Mods
 {
+    /// <summary>
+    /// Moves the mouse for the player, does not hit targets.
+    /// </summary>
     public class ModAutopilot : Mod, IApplicableFailOverride, IUpdatableByPlayfield, IApplicableToDrawableRuleset<HitObject>
     {
         public override string Name => "Autopilot";
